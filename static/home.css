@@ -1,0 +1,261 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+
+.navbar {
+    background-color: white;
+    color: rgb(85, 81, 81);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+}
+.username{
+    margin-left:50px;
+}
+.logo {
+    display: flex;
+    align-items: center; /* Vertically center items within the .logo div */
+}
+.fa-regular{
+    font-size: 20px;
+}
+
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 22px;
+    color: crimson;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.user-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/* Search bar styles */
+.search-bar {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    /* position: fixed; */
+    /* top: 50; */
+    width: 100%;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* display: inline-block; */
+    overflow: hidden; /* Hide the content when the height is 0 */
+    transition: max-height 2s ease-in-out;
+}
+.search-bar.active {
+    max-height: 200px; /* Adjust the value to control the final height */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.suggestions {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 40%;
+    box-shadow: 0px -2px 6px rgba(0,0,0,0.1);
+}
+.suggestion{
+    display: block;
+    color: black;
+    padding: 10px;
+    box-shadow: 0px -2px 1px rgba(0,0,0,0.1);
+    margin-left: 39px;
+    /* text-align: center; */
+
+}
+
+/* Book Your Slot Section styles */
+
+.view-area-button{
+    
+    /* height: 80px; */
+    background-color: whitesmoke;
+    /* padding: 5px 10px; */
+    border: solid crimson 1px;
+    
+    border-radius: 5px; 
+    text-align: center;
+    cursor: pointer;
+    color: crimson;
+    font-size: 16px;
+    margin-left: 5px;
+    /* margin-bottom: 4px; */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+.view-area-button:hover{
+    background-color: crimson;
+    border: transparent;
+    color: whitesmoke;
+}
+
+.area-details{
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+
+
+}
+.area-details h3{
+    padding: 0px;
+    margin: 0px;
+}
+.slot-status{
+    
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    margin-left: 10px;
+}
+.slot-status h2{
+    font-size: 20px;
+}
+.book-slot {
+    text-align: center;
+    padding: 20px;
+    font-weight: 100;
+}
+
+
+.status-item {
+    display: inline-block;
+    margin: 0 20px;
+    align-items: center;
+}
+
+.status-color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius:50%;
+}
+
+.red { background-color: red; }
+.green { background-color: green; }
+.gray { border: dashed 1px; }
+.gold { background-color: gold; }
+
+/* Slot Section styles */
+.slots {
+    
+    width: 98%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+.slot-side {
+
+    column-gap: 10px;
+}
+.side-1{
+    border-right: 1px dashed #979797;
+}
+.make-style{
+    color:crimson;
+}
+
+.slot-card {
+    border: 1px dashed #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    margin-left: 15px;
+    align-items: center;
+    height: 160px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-style: bold;
+    color: rgb(151, 151, 151);
+    
+}
+
+.card-status {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+hr{
+    
+border-top: dashed 2px;
+}
+
+.red-card { background-color: rgb(235, 77, 77); color: white; }
+.green-card { background-color: rgb(27, 177, 27); color: white; }
+.gray-card {  background-color: grey; color: black; }

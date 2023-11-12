@@ -1,0 +1,109 @@
+{% extends "dashboard-base.html" %}
+
+
+{% block link %}
+
+<title> Quick Park System Areas </title>
+
+{% endblock link %}
+
+
+
+
+{% block content %}
+
+<style>
+    .home-content .sales-boxes .recent-sales { 
+    width: 85%;
+    }
+    .delete{
+        background-color: #D11A2A;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        color: white;
+        padding: 4px;
+    }
+    .add{
+      margin-right: 5px;
+      background-color: green;
+      width: 68px;
+      margin-top: 15px;
+      
+    }
+    .edit{
+      margin-right: 5px;
+      width: 68px;
+      background-color: #d1b01a;
+    }
+
+
+    .sales-boxes .sales-details li button a {
+        color: white;
+    } 
+</style>
+
+
+
+<div class="home-content">
+    
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">All Staff List</div>
+          <div class="sales-details">
+            
+            
+            <ul class="details">
+              <li class="topic">Staff Name</li>
+              {% for i in staff %}
+              <li><a href="#">{{i.first_name}} {{i.last_name}}</a></li>
+              {% endfor %}
+            </ul>
+
+            <ul class="details">
+              <li class="topic">NID</li>
+              {% for i in staff %}
+              <li><a href="#">{{i.nid}}</a></li>
+              {% endfor %}
+            </ul>
+            
+            <ul class="details">
+                <li class="topic">Phoen</li>
+                {% for i in staff %}
+                <li><a href="#">{{i.phone}}</a></li>
+                {% endfor %}
+              </ul>
+            
+            
+            
+
+
+            
+            
+            <ul class="details">
+              <li class="topic">Action <button class="delete add"><a href="/auth/register">Add</a></button></li>
+              {% for i in staff %}
+              
+              <li>
+                <button class="delete edit"><a href="/admin/Auth/user/{{i.id}}/change/">Edit</a></button>
+                <button class="delete"><a href="/dashboard/delete_staff/{{i.id}}">Delete</a></button>
+               
+            
+            </li>
+              {% endfor %}
+             
+            </ul>
+       
+            
+            
+            
+            
+
+
+
+
+          </div>
+        </div>
+    </div>
+  </section>
+
+  {% endblock content %}

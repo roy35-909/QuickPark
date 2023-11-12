@@ -1,0 +1,135 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<title>Areas | By Quickpark</title>
+
+<link rel="stylesheet" href="{%static 'area.css'%}">
+<link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock link%}
+
+{% block content %}
+
+
+<style>
+    .transparent-navbar {
+        position: relative;
+
+    }
+    .area_name{
+        text-decoration : none;
+        color: black;
+    }
+</style>
+ {% for i in area %}
+
+
+<div class="slots row">
+
+
+   
+
+    <div class="area-details"><h3 class="area-details"> <a class="area_name" href="/book/areas/{{i.id}}">{{i.name}}</a></h3></div>
+    
+
+
+    <div class="slot-side col-6 side-1">
+
+        <div class="row">
+
+        {% for j in i.slots.all|slice:":5" %}
+
+        {% if j.is_busy %}
+        
+        
+        <div class="slot-card red-card col-3">
+            {{j.number}}
+            
+            <!-- Slot content here -->
+        </div>
+
+        {% else %}
+        <div class="slot-card green-card col-3">
+            {{j.number}}
+            
+            <!-- Slot content here -->
+        </div>
+        
+        {% endif %}
+
+        
+        
+        {% endfor %}
+
+
+   
+
+
+
+        </div>
+
+        
+        <!-- Repeat for 10 slots -->
+    </div>
+
+    <!-- <div class="side-1 col-1"></div> -->
+    <div class="slot-side col-6">
+  
+        <div class="row">
+            {% for j in i.slots.all|slice:"5:" %}
+
+            {% if j.is_busy %}
+            
+            
+            <div class="slot-card red-card col-3">
+                {{j.number}}
+                
+                <!-- Slot content here -->
+            </div>
+    
+            {% else %}
+            <div class="slot-card green-card col-3">
+                {{j.number}}
+                
+                <!-- Slot content here -->
+            </div>
+            
+            {% endif %}
+    
+            
+            
+            {% endfor %}
+
+            </div>
+        <!-- Repeat for 10 slots -->
+    </div>
+
+    <div class="status">
+        <ul>
+            <li><div class="green-card"></div> Free</li>
+            <li><div class="red-card"></div> Busy</li>
+            <li><div class="gray-card"></div> Not Available</li>
+        </ul>
+    </div>
+
+</div>
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+

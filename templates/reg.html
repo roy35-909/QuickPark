@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %}
+
+<link rel="stylesheet" href="{% static 'reg.css' %}">
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+{% endblock %}
+{%block content%}
+  <link rel="stylesheet" type="text/css" href="reg.css">
+
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+      <form action="/auth/register" method="POST">
+        {% csrf_token %}
+
+        {% if request.user.is_superuser %}
+          <h2>Add Your Staff</h2>
+
+        {% else %}
+        <h2>Sign Up</h2>
+
+        {% endif %}
+
+
+        <div class="con">
+
+            <div class="left-login">
+
+
+              {% if request.user.is_superuser %}
+
+
+              {% else %}
+              <div class="input-group">
+                <input type="text" name="email">
+                <label for="">Email</label>
+              </div>
+      
+              {% endif %}
+
+                  <div class="input-group">
+                    <input type="text" name="nid">
+                    <label for="">NID</label>
+                  </div>
+                  <div class="input-group">
+                    <input type="password" required name="password">
+                    <label for="">Password</label>
+                  </div>
+                  <div class="remember">
+                    <label><input type="checkbox"> Remember me</label>
+                  </div>
+            </div>
+
+            <div class="right-login">
+                <div class="input-group">
+                    <input type="text" required name="first_name">
+                    <label for="">First Name</label>
+                  </div>
+                  <div class="input-group">
+                    <input type="text" required name="last_name">
+                    <label for="">Last Name</label>
+                  </div>
+                  <div class="input-group">
+                    <input type="number" required name="phone">
+                    <label for="">Phone</label>
+                  </div>
+        
+
+            </div>
+        </div>
+        {% if request.user.is_superuser %}
+        <button type="submit">Add</button>
+
+        {% else %}
+        <button type="submit">Submit</button>
+
+        {% endif %}
+        
+        <div class="signUp-link">
+
+          {% if request.user.is_superuser %}
+
+
+        {% else %}
+        <p>Already have an account? <a href="login" class="signUpBtn-link">Log In</a></p>
+
+        {% endif %}
+
+        {%for message in messages%}
+        <p >{{message}}</p>
+        {%endfor%}
+          
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+{%endblock%}

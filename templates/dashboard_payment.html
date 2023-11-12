@@ -1,0 +1,104 @@
+{% extends "dashboard-base.html" %}
+
+
+{% block link %}
+
+<title> Quick Park System Areas </title>
+
+{% endblock link %}
+
+
+
+
+{% block content %}
+
+<style>
+    .home-content .sales-boxes .recent-sales { 
+    width: 85%;
+    }
+    .delete{
+        background-color: #D11A2A;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        color: white;
+        padding: 4px;
+    }
+    .add{
+      margin-right: 5px;
+      background-color: green;
+      width: 68px;
+      margin-top: 15px;
+      
+    }
+    .edit{
+      margin-right: 5px;
+      width: 68px;
+      background-color: #d1b01a;
+    }
+
+
+    .sales-boxes .sales-details li button a {
+        color: white;
+    } 
+</style>
+
+
+
+<div class="home-content">
+    
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">All Payment List</div>
+          <div class="sales-details">
+
+
+            <ul class="details">
+                <li class="topic">Name</li>
+                {% for i in cheakout %}
+                <li><a href="#">{{i.user.first_name}} {{i.user.last_name}}</a></li>
+                {% endfor %}
+              </ul>
+            
+            
+            <ul class="details">
+              <li class="topic">Phone</li>
+              {% for i in cheakout %}
+              {% if i.phone %}
+              <li><a href="#">{{i.phone}}</a></li>
+              {% else %}
+              <li><a href="#"> Null</a></li>
+
+              {%endif%}
+              {% endfor %}
+            </ul>
+
+            <ul class="details">
+              <li class="topic">Payment ID</li>
+              {% for i in cheakout %}
+              {% if i.phone %}
+              <li><a href="#">{{i.payment_id}}</a></li>
+              {% else %}
+              <li><a href="#"> Null</a></li>
+
+              {%endif%}
+
+              {% endfor %}
+            </ul>
+            
+            <ul class="details">
+                <li class="topic">Total</li>
+                {% for i in cheakout %}
+                <li><a href="#">{{i.total}}</a></li>
+                {% endfor %}
+              </ul>
+            
+            
+            
+
+
+            
+            
+
+
+
+{% endblock content %}

@@ -1,0 +1,451 @@
+/* Basic styles for the transparent navbar */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,300;1,700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,700;1,900&display=swap');
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.transparent-navbar {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+}
+.transparent-navbar nav{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.transparent-navbar nav .logo h3{
+    color: white;
+    font-weight: 200;
+    font-size: 26px;
+}
+
+.transparent-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.transparent-navbar ul li {
+    display: inline;
+    margin-right: 20px;
+    color: white;
+}
+
+.transparent-navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Styles for the video background section */
+.video-section {
+    position: relative;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Styles for the sliding divs */
+.slider {
+    position: absolute; 
+    
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+
+}
+.slick-active{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    display: flex;
+
+}
+
+.slide {
+    width: 600px;
+    height: 100%;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.slide h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 300;
+    
+}
+.slide p{
+    margin-top: 50px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: 20px;
+    font-weight: 100;
+    line-height: normal;
+    margin: auto;
+    padding-top: 5%;
+
+}
+
+
+.slide button{
+    height: 40px;
+    padding: 5px;
+    /* display: inline;
+    margin-left: auto; */
+    margin-top: 20px;
+    width: 300px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid royalblue;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+.slide button:hover{
+    background-color: royalblue;
+}
+.contant{
+    display: flex;
+}
+
+.video-footerr{
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+.video-footerr p{
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    word-spacing: 4px;
+}
+
+
+
+.sky_garage{
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.sky_container {
+    display: flex;
+    
+}
+.sky_left{
+    height: 100vh;
+    width: 70%;
+    background-image: url("living_1.jpg");
+    background-size: cover;
+}
+
+
+.right_sky_data{
+    height: 100%;
+    padding-left: 30px;
+    margin-top: 100px;
+}
+
+.right_sky_data h1{
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 55px;
+    margin-bottom: 40px;
+}
+
+.right_sky_data p{
+    font-size: 25px;
+    margin-top: 3.255vw;
+    font-weight: 400;
+    margin-bottom: 4.255vw;
+}
+.right_sky_data button{
+
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: transparent;
+    border-color: black;
+}
+
+.services{
+    padding-top: 60px;
+    background-color: #cee3e2;
+    padding-bottom: 60px;
+}
+
+.service-content{
+
+    display: flex;
+}
+.service-left{
+margin-right: 10px;
+display: flex;
+align-items: center;
+width: 50%;
+}
+.service-right{
+    width: 40%;
+    margin-left: auto;
+    padding-right:10px ;
+}
+
+.service-left img{
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+
+    
+}
+.services h1, .find-place h1{
+
+    text-align: center;
+    font-size: 44px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+}
+
+.cardd{
+    display: flex;
+    height: 100px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    align-items: center;
+}   
+
+.icon{
+    width: 40%;
+    font-size: 50px;
+    color: rgb(41, 41, 41);
+    text-align: center;
+  
+}
+.text p{
+    font-size: 16px;
+    color: gray;
+    margin-right: 5px;
+}
+
+.product{
+
+
+    height: 100vh;
+    width: 99%;
+    margin: auto;
+    padding-top: 50px;
+
+}
+.row-sec{
+
+    margin-top: 20px;
+
+}
+
+#c-2{
+    background-image: url("./product_MetroTrans.png") ;
+}
+#c-3{
+    background-image: url("./main_Sensor_Pole.png");
+    background-size: contain;
+}
+#c-4{
+    background-image: url("./main_DuoRobot.png");
+    background-size: contain;
+}
+#c-5{
+    background-image: url("./main_EV_PowerLink.png");
+    background-size: contain;
+}
+
+#c-6{
+    background-image: url("./main_Interface.png");
+    background-size: contain;
+}
+
+#c-7{
+    background-image: url("./main_Kiosk.png");
+    background-size: contain;
+}
+
+#c-8{
+    background-image: url("./main_MPScan_360.png");
+    background-size: contain;
+}
+
+#c-9{
+    background-image: url("./main_UV_Steam_Sterilization.png");
+    background-size: contain;
+}
+#c-10{
+    background-image: url("./product_MetroTrans.png");
+    background-size: contain;
+}
+.product_card{
+
+    height: 250px;
+    max-width: 260px;
+
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+.imge{
+
+    overflow: hidden;
+    height: 95%;
+    background-image: url("./product_Duo_Pro\ \(1\).png") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.products-data{
+    margin-left: 20px;
+}
+.product_card p{
+  
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.products-data{
+    height: 100%;
+    width: 100%;
+}
+
+.products-data h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.products-data p{
+    font-size: 25px;
+}
+/* Find Place Section */
+
+
+.find-place{
+    padding-top: 40px;
+    height: 90vh;
+    background-color: aliceblue;
+}
+
+.find-content{
+    display: flex;
+
+}
+
+.find-left{
+width: 50%;
+padding-top: 50px;
+
+display: flex;
+align-items: center;
+}
+.find-left h2{
+    font-weight: 300;
+    padding-left: 100px;
+    text-align: center;
+    font-size: 40px;
+}
+.find-left h2 span{
+    color: crimson;
+}
+.find-right{
+width: 50%;
+
+height: 100%;
+}
+form{
+    width: 100%;
+
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+.find-right input{
+
+    width: 60%;
+    outline: none;
+    border: 1px gray solid;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 20px;
+    margin-right: 20px;
+
+    align-items: center;
+}
+.find-right button{
+    width: 70px;
+    height: 36px;
+    border: 1px gray solid;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.src-card{
+    width: 60%;
+    margin-right: auto;
+
+    background-color: white;
+    padding:5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.src-card p{
+    text-align: center;
+    margin-left: 20px;
+
+    margin-bottom: 0;
+}
+.src-card p a{
+    text-decoration: none;
+    color: black;
+}
+.src-card p a:hover{
+    color: blue;
+    text-decoration: underline;
+}

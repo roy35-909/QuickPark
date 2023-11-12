@@ -1,0 +1,108 @@
+.form-view{
+    height: 70%;
+    width: 60%;
+    margin: auto;
+}
+
+
+label{
+    
+    color: whitesmoke;
+}
+
+.col-6 input{
+    width: 100%;
+}
+
+form h3{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+}
+
+input,select{
+    margin: auto;
+    height: 35px;
+    width: 50%;
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+}
+select{
+    width: 100%;
+}
+
+.content{
+    text-align: center;
+}
+
+form{
+    border-radius: 6px;
+    width: 300px;
+    background-color: crimson;
+
+    
+}
+.checkbox{
+    
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.checkbox input{
+    
+
+    width: 15px;
+}
+.checkbox label{
+    
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+#Layer_1{
+    color: crimson;
+}
+#bikash{
+    width: 70px;
+}
+
+
+/* Add CSS for styling the user info div */
+.user-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    height:20%
+}
+
+.user-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    color: gray;
+    font-size: 30px;
+    display: flex;
+    
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+.header h3{
+    font-size: 20px;
+}

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %}
+<title>Booked Car Slots</title>
+<link rel="stylesheet" href="{% static 'index.css' %}">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    .transparent-navbar {
+        position: relative;
+
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .slot {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .slot .car-info {
+        flex: 1;
+    }
+
+    .slot .action {
+        text-align: right;
+    }
+
+    .slot .action button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .slot .action button:hover {
+        background-color: #555;
+    }
+</style>
+
+
+{% endblock link %}
+
+
+
+
+
+   
+{% block content %}
+
+    <div class="container">
+
+        {% for i in all_booking %}
+        
+      
+        <div class="slot">
+            <div class="car-info">
+                <h2>{{i.area.name}} {{i.slots.number}} </h2>
+                <p>Car :{{i.car_no}}</p>
+                <p>Booking Date: {{i.start_time}}</p>
+            </div>
+            <div class="action">
+                <button onclick="location.href='/book/cheakout/{{i.id}}';">Checkout</button>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- Add more booked slots here -->
+    </div>
+
+
+    {% endblock content %}
